@@ -30,3 +30,20 @@ const deleteNote = (id) => {
         method: "DELETE",
     });
 };
+
+//function to display ongoing note or not if there is no ongoing note
+const activeNote = () => {
+    $saveBtn.hide();
+
+    if (activeNote.id) {
+        $noteTitle.attr("readonly", true);
+        $noteBody.attr("readonly", true);
+        $noteTitle.val(activeNote.title);
+        $noteBody.val(activeNote.text);
+    } else {
+        $noteTitle.attr("readonly", false);
+        $noteBody.attr("readonly", false);
+        $noteTitle.val("");
+        $noteBody.val("");
+    }
+};
