@@ -23,3 +23,10 @@ const saveNote = (note) => {
     });
 };
 
+//function to delete notes
+const deleteNote = (id) => {
+    return $.ajax ({
+        url: "api/notes/" + id,
+        method: "DELETE",
+    });
+};
