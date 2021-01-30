@@ -4,7 +4,7 @@ const $saveBtn = $(".saveBtn");
 const $newBtn = $(".newBtn");
 const $noteList = $(".list-container .list-group");
 
-let currentNote = {};
+let activeNote = {};
 
 //function to retrieve notes 
 const getNotes = () => {
@@ -74,3 +74,8 @@ const DeleteNoteAction = function (event) {
     });
 };
 
+const handleCurrentNote = function () {
+
+
+
+}
