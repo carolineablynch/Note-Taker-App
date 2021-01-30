@@ -47,3 +47,30 @@ const activeNote = () => {
         $noteBody.val("");
     }
 };
+
+//save note 
+const noteSave = function () {
+    const newNote = {
+        title: $noteTitle.val();
+        body: $noteBody.val();
+    };
+
+    saveNote(newNote).then(() => {
+        getAndRenderNotes();
+        activeNote();
+    });
+};
+
+const DeleteNoteAction = function (event) {
+    const note =$(this).parent(".list-group-item").data();
+
+    if (activeNote.id === note.id) {
+        activeNote = {};
+    }
+
+    deleteNote(note.id).then(() => {
+        getAndRenderNotes();
+        activeNote();
+    });
+};
+
