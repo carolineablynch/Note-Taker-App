@@ -18,7 +18,7 @@ You will then want to run npm install to install the required packages for this 
 
 ## Deployed Link 
 
-I am having some trouble getting the application to function properly but the link can be found here: 
+I am having some trouble getting the application to function properly but the link can be found here: https://blooming-plains-75479.herokuapp.com/
 
 ## License 
 
