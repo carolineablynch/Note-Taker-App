@@ -6,11 +6,11 @@ const express = require("express");
 //telling our app that we are using an express server 
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5500;
 
+app.use(express.static("public")); //https://stackoverflow.com/questions/13339695/nodejs-w-express-error-cannot-get
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
-app.use(express.static("public"));
 
 //routing 
 

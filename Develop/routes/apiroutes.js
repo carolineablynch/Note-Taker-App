@@ -9,9 +9,8 @@ module.exports = function (app) {
 // GET request 
 
     app.get("/api/notes", function(req, res) {
-        res.send(db);
+        res.json(db);
     });
-
 
 //new note POST 
 
@@ -32,7 +31,7 @@ fs.readFile("./db/db.json", "utf8", (err, data) => {
 
     fs.writeFile("./db/db.json", JSON.stringify(allNotes, null, 2), err => {
         if (err) throw err;
-        res.send(db);
+        res.json(db);
         console.log("your note was created")
         });
     });
@@ -50,7 +49,7 @@ app.delete("/api/notes:id", (req, res) => {
 
         fs.writeFile("./db/db.json", JSON.stringify(newAllnotes, null, 2), err => {
             if (err) throw err;
-            res.send(db);
+            res.json(db);
             console.log("your note was deleted")
         });
     });
